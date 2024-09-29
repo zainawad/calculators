@@ -1,0 +1,22 @@
+print("***** Welcome to iShop calculator *****")
+number_item=int(input("How many items are there in your basket today? "))
+prices=[]
+all_item=[]
+print("\n Let's get to counting them ....")
+for items in range (1, number_item+1):
+  item_name=input(f"Please tell me the name of the item number {items} ")
+  all_item.append(item_name)
+  price_item=float(input(f"What is the price of {item_name} "))
+  print(f"{price_item}  $")
+  prices.append(price_item)
+
+how_much=input("Would you like to see how much it'll cost?\n ").lower()
+if how_much== "yes":
+  print("Buying these items will cost: ")
+  print(f"you bought {all_item}")
+  print(sum(prices))
+
+else:
+  print("Thanks for using")
+
+
